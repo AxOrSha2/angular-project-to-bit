@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    /* background-color: #007F5F;
+    opacity: 0.6;
+    background-image:  radial-gradient(#BFD200 1px, transparent 1px), radial-gradient(#BFD200 1px, #007F5F 1px);
+    background-size: 40px 40px;
+    background-position: 0 0,20px 20px; */
+    background-color: #007F5F;
+    /* opacity: 1; */
+    background-image:  radial-gradient(#BFD200 1.4000000000000001px, transparent 1.4000000000000001px), radial-gradient(#BFD200 1.4000000000000001px, #007F5F 1.4000000000000001px);
+    background-size: 56px 56px;
+    background-position: 0 0,28px 28px;
+}

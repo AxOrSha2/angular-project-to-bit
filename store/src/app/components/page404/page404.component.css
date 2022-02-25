@@ -1,0 +1,7 @@
+.pattern-404 {
+    background-color: #dbeee0;
+    opacity: 1;
+    background-image:  radial-gradient(#d3d3d3 1px, transparent 1px), radial-gradient(#d3d3d3 1px, #dbeee0 1px);
+    background-size: 40px 40px;
+    background-position: 0 0,20px 20px;
+}

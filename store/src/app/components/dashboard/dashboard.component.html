@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" routerLink="/">
+            <img src="assets/img/avocadoNav.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            Avocado Store
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-nav">
+                <button class="nav-item btn btn-outline-light me-3" routerLink="/">Inicio</button>
+                <button class="nav-item btn btn-outline-light me-3" routerLink="/404">Prueba 404</button>
+                <button class="nav-item btn btn-success me-3" type="submit" routerLink="/shopping-cart">
+                    <i class="fa-solid fa-cart-shopping"></i> Carrito de Compra
+                </button>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn btn-outline-secondary dropdown-toggle" id="dropdownMenuButtonUser" data-bs-toggle="dropdown" aria-expanded="false">
+                Usuario: Prueba
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonUser">
+                <li>
+                    <a class="dropdown-item" href="#">
+                        <i class="fa-solid fa-pen-to-square"></i> Editar
+                    </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                    <a class="dropdown-item" href="#">
+                        <i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
