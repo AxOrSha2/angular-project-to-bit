@@ -1,4 +1,4 @@
-export class Product {
+export class ShoppingCart {
 
     _id?:any;
     name: string;

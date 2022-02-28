@@ -1,13 +1,18 @@
 <app-dashboard></app-dashboard>
 <section class="container">
-    <div class="row p-5 hstack gap-3">
-        <div class="card px-3" style="width: 18rem;" aria-hidden="true">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Avocado_Hass_-_single_and_halved.jpg/1280px-Avocado_Hass_-_single_and_halved.jpg" class="card-img-top p-2" alt="...">
+    <div class="row bg-dark p-3 m-3 justify-content-center">
+        <h1 class="gradient-text text-center">Bienvenido a su tienda de confianza</h1>
+    </div>
+    <div class="row p-3 justify-content-center hstack gap-3">
+        <div *ngFor="let product of productList" class="card px-3" style="width: 18rem;" aria-hidden="true">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Avocado_Hass_-_single_and_halved.jpg/1280px-Avocado_Hass_-_single_and_halved.jpg"
+                class="card-img-top p-2" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                    content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title"> Producto: {{ product.name }}</h5>
+                <p class="card-text"> Valor: {{ product.price }}</p>
+                <p class="card-text"> Disponibles: {{ product.stock_available }}</p>
+                <a href="#" class="btn btn-primary"> <i class="fa-solid fa-cart-arrow-down"></i> Añadir al carrito </a>
+                <!-- <p class="card-text"> Descripción: {{ product.description }}</p> -->
             </div>
         </div>
     </div>
