@@ -10,7 +10,8 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <div class="navbar-nav">
                 <button class="nav-item btn btn-outline-light me-3" routerLink="/">Inicio</button>
-                <button class="nav-item btn btn-outline-light me-3" routerLink="/404">Prueba 404</button>
+                <button class="nav-item btn btn-outline-light me-3" routerLink="/user">Usuarios</button>
+                <button class="nav-item btn btn-outline-danger me-3" routerLink="/404">404</button>
                 <button class="nav-item btn btn-success me-3" type="submit" routerLink="/shopping-cart">
                     <i class="fa-solid fa-cart-shopping"></i> Carrito de Compra
                 </button>
@@ -27,13 +28,18 @@
                     </a>
                 </li>
                 <li>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" routerLink="/create-user">
+                        <i class="fa-regular fa-square-plus"></i> Crear usuario
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item disabled" href="#">
                         <i class="fa-solid fa-pen-to-square"></i> Editar
                     </a>
                 </li>
                 <li><hr class="dropdown-divider"></li>
                 <li>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item disabled" href="#">
                         <i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión
                     </a>
                 </li>

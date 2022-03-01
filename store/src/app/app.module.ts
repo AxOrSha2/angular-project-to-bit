@@ -10,6 +10,7 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UserComponent } from './components/user/user.component';
+import { RegisterUsersComponent } from './components/register-users/register-users.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { UserComponent } from './components/user/user.component';
     Page404Component,
     DashboardComponent,
     ShoppingCartComponent,
-    UserComponent
+    UserComponent,
+    RegisterUsersComponent
   ],
   imports: [
     BrowserModule,
