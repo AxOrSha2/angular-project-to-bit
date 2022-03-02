@@ -8,30 +8,32 @@
             </button>
         </div>
         <div class="col-5">
-            <h1 class="p-3 text-light">Formulario de Usuarios</h1>
+            <h1 class="p-3 text-light"> {{ form_title }} </h1>
         </div>
     </div>
     <div class="row p-3 bg-light">
-        <form class="form-floating" [formGroup]="userForm" (ngSubmit)="userInfo()">
+        <form class="form-floating px-5 py-3" [formGroup]="userForm" (ngSubmit)="userInfo()">
             <div class="form-floating mb-3">
                 <input type="text" formControlName="fullName" class="form-control" id="floatingName" placeholder="Full Name required">
                 <label for="floatingName">Nombre: </label>
             </div>
-            <div class="form-floating mb-3">
-                <input type="email" formControlName="email" class="form-control" id="floatingEmail" placeholder="email@email.email">
-                <label for="floatingEmail">Correo: </label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="text" formControlName="cellphone" class="form-control" id="floatingCellPhone" placeholder="Number of cellphone">
-                <label for="floatingCellPhone">Número celular: </label>
+            <div class="row mb-3">
+                <div class="col-md-6 mb-2 form-floating">
+                    <input type="email" formControlName="email" class="form-control" id="floatingEmail" placeholder="email@email.email">
+                    <label class="mx-2" for="floatingEmail">Correo: </label>
+                </div>
+                <div class="col-md-6 form-floating">
+                    <input type="text" formControlName="cellphone" class="form-control" id="floatingCellPhone" placeholder="Number of cellphone">
+                    <label class="mx-2" for="floatingCellPhone">Número celular: </label>
+                </div>
             </div>
             <div class="form-floating mb-3">
                 <input type="text" formControlName="address" class="form-control" id="floatingAddress" placeholder="The address is required">
                 <label for="floatingAddress">Dirección: </label>
             </div>
-            <button type="submit" class="btn btn-success my-3">
+            <button type="submit" class="btn btn-success btn-lg px-5">
                 <i class="fa-regular fa-floppy-disk"></i>
-                Registrar
+                Registrar formulario
             </button>
         </form>
     </div>

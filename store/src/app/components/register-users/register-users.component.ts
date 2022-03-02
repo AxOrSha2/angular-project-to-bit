@@ -14,7 +14,7 @@ import Swal from 'sweetalert2';
 export class RegisterUsersComponent implements OnInit {
 
   userForm: FormGroup;
-  form_title = 'Create User';
+  form_title = 'Crear usuario';
   id: String | null;
   only_numbers = /^([0-9])*$/;
 
@@ -31,18 +31,16 @@ export class RegisterUsersComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.actionRequired()
+    this.getUserInfo()
   }
 
   userInfo() {
-    // console.log(this.userForm)
     const user_form: User = {
         fullName: this.userForm.get('fullName')?.value,
         email: this.userForm.get('email')?.value,
         cellphone: this.userForm.get('cellphone')?.value,
         address: this.userForm.get('address')?.value,
     }
-    // console.log(user_form)
     if (this.id === null) {
         //When the user is created
         this._userService.postUsers(user_form).subscribe(data => {
@@ -82,9 +80,9 @@ export class RegisterUsersComponent implements OnInit {
 
 }
 
-  actionRequired() {
+  getUserInfo() {
     if (this.id !== null) {
-      this.form_title = 'Alter user';
+      this.form_title = 'Actualizar datos';
       this._userService.getUser(this.id).subscribe(data => {
         this.userForm.setValue({
           fullName: data.fullName,

@@ -1,17 +1,14 @@
 export class ShoppingCart {
 
-    _id?:any;
-    name: string;
-    price: string;
-    description: string;
-    seller: string;
-    stock_available: number;
+    idProduct: string;
+    nameProduct: string;
+    priceByProductUnit: number;
+    amountProduct: number;
 
-    constructor(name: string, price: string, description: string, seller: string,stock_available: number) {
-        this.name = name;
-        this.price = price;
-        this.description = description;
-        this.seller = seller;
-        this.stock_available = stock_available;
+    constructor(idProduct: string, nameProduct: string, priceByProductUnit: number, amountProduct: number) { 
+        this.idProduct = idProduct;
+        this.nameProduct = nameProduct;
+        this.priceByProductUnit = priceByProductUnit;
+        this.amountProduct = amountProduct;
     }
 }

@@ -1,22 +1,55 @@
 <app-dashboard></app-dashboard>
 <section class="container p-3">
-    <div class="row justify-content-center">
-        <div class="col-5 bg-light me-3 p-3">
-            <h2>Lista de compras</h2>
-            <div class="card m-3">
-                <div class="card-header">
-                    Producto
-                    <button type="button" class="btn-close aling-item-end" aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                    <blockquote class="blockquote mb-0">
-                        <p>A well-known quote, contained in a blockquote element.</p>
-                    </blockquote>
+    <div class="row py-3 bg-dark">
+        <div class="col align-items-center">
+            <button class="btn btn-light btn-lg float-start mx-4" [routerLink]="['/']">
+                <i class="fa-regular fa-circle-left"></i>
+                Volver a inicio
+            </button>
+            <h1 class="h1 text-light float-center">Carrito de compras</h1>
+        </div>
+    </div>
+    <div class="row bg-light align-items-center justify-content-center">
+        <div class="col-5 px-3 py-5 ">
+            <div class="row px-3 py-1">
+                <h1 class="h1 px-1 py-1 float-start"> Lista de compras </h1>
+            </div>
+            <div *ngIf="show else message">
+                <div class="px-3 py-1 bg-dark rounded">
+                    <div *ngFor="let product of shoppingCartList" class="card m-3">
+                        <div class="card-header">
+                            {{ product.nameProduct }}
+                            <button type="button" class="btn-close float-end" aria-label="Close"></button>
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>Valor: {{ product.priceByProductUnit }}</p>
+                            </blockquote>
+                            <blockquote class="blockquote mb-0">
+                                <p>Cantidad: {{ product.amountProduct }}</p>
+                            </blockquote>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="row mx-3 pt-3 pb-2">
+                <button class=" btn btn-dark btn-lg float-end" (click)="cleanCart()">
+                    <i class="fa-solid fa-trash"></i>
+                    Limpiar carrito
+                </button>
+            </div>
         </div>
-        <div class="col-5 bg-light me-3 p-3">
-            <h2>Detalles de la compra</h2>
+        <div class="col-6">
         </div>
     </div>
 </section>
+
+<ng-template #message>
+    <div class="px-5 py-5 bg-dark">
+        <h1 class="text-light">Parece que no hay nada por aquí :(</h1>
+        <button class="btn btn-primary btn-lg float-center" [routerLink]="['/']">
+            <i class="fa-regular fa-circle-left"></i>
+            Ir a comprar
+        </button>
+    </div>
+</ng-template>
