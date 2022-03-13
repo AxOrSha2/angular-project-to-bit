@@ -9,7 +9,7 @@
                 class="card-img-top p-2" alt="...">
             <div class="card-body">
                 <h5 class="card-title"> Producto: {{ product.name }}</h5>
-                <p class="card-text"> Valor: {{ product.price }}</p>
+                <p class="card-text"> Valor: {{ product.price | currency:'COP'}}</p>
                 <p class="card-text"> Disponibles: {{ product.stock_available }}</p>
                 <a class="btn btn-primary" (click)="addToShoppingCart(product._id, product.name, product.price, product.stock_available)"> 
                     <i class="fa-solid fa-cart-arrow-down"></i> 

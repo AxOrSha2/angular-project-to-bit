@@ -23,7 +23,7 @@
                         </div>
                         <div class="card-body">
                             <blockquote class="blockquote mb-0">
-                                <p>Valor: {{ product.priceByProductUnit }}</p>
+                                <p>Valor: {{ product.priceByProductUnit | currency:'COP' }}</p>
                             </blockquote>
                             <blockquote class="blockquote mb-0">
                                 <p>Cantidad: {{ product.amountProduct }}</p>
