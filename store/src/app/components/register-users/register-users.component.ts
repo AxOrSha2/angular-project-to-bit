@@ -75,10 +75,8 @@ export class RegisterUsersComponent implements OnInit {
             })
             console.log(error)
         })
-
     }
-
-}
+  }
 
   getUserInfo() {
     if (this.id !== null) {

@@ -11,6 +11,23 @@
             <div class="navbar-nav">
                 <button class="nav-item btn btn-outline-light me-3" routerLink="/">Inicio</button>
                 <button class="nav-item btn btn-outline-light me-3" routerLink="/user">Usuarios</button>
+                <div class="dropdown">
+                    <button class="btn btn btn btn-outline-light me-3 dropdown-toggle" id="dropdownMenuButtonUser" data-bs-toggle="dropdown" aria-expanded="false">
+                        Productos
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonUser">
+                        <li>
+                            <a class="dropdown-item" routerLink="/products">
+                                <i class="fa-solid fa-list"></i> Productos
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/create-product">
+                                <i class="fa-regular fa-square-plus"></i> Crear productos
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <button class="nav-item btn btn-outline-danger me-3" routerLink="/404">404</button>
                 <button class="nav-item btn btn-success me-3" type="submit" routerLink="/shopping-cart">
                     <i class="fa-solid fa-cart-shopping"></i> Carrito de Compra

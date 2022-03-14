@@ -1,0 +1,45 @@
+<app-dashboard></app-dashboard>
+<section class="container pt-3">
+    <div class="row py-3 bg-dark">
+        <div class="col-3 align-self-center">
+            <button class="btn btn-light btn-lg float-start mx-4" [routerLink]="['/products']">
+                <i class="fa-regular fa-circle-left"></i>
+                Volver a productos
+            </button>
+        </div>
+        <div class="col-5">
+            <h1 class="p-3 text-light"> {{ form_title }} </h1>
+        </div>
+    </div>
+    <div class="row p-3 bg-light">
+        <form class="form-floating px-5 py-3" [formGroup]="productForm" (ngSubmit)="productInfo()">
+            <div class="form-floating mb-3">
+                <input type="text" formControlName="name" class="form-control" id="floatingName" placeholder="Full Name required">
+                <label for="floatingName"> Nombre: </label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" formControlName="price" class="form-control" id="floatingPrice" placeholder="Full Name required">
+                <label for="floatingPrice"> Valor unitario: </label>
+            </div>
+            <div class="input-group mb-3">
+                <!-- <input type="text" formControlName="description" class="form-control" id="floatingDescription" placeholder="Full Name required"> -->
+                <span class="input-group-text">Descripción</span>
+                <textarea formControlName="description" class="form-control" id="floatingDescription" placeholder="Descripción del producto" cols="15" rows="5">
+                </textarea>
+                <!-- <label for="floatingDescription"> Descripción: </label> -->
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" formControlName="seller" class="form-control" id="floatingSeller" placeholder="Full Name required">
+                <label for="floatingSeller"> Vendedor o proveedor: </label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" formControlName="stock_available" class="form-control" id="floatingStock" placeholder="Full Name required">
+                <label for="floatingStock"> Stock disponible: </label>
+            </div>
+            <button type="submit" class="btn btn-success btn-lg px-5">
+                <i class="fa-regular fa-floppy-disk"></i>
+                Registrar formulario
+            </button>
+        </form>
+    </div>
+</section>

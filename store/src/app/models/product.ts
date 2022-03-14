@@ -1,6 +1,7 @@
 export class Product {
 
     _id?:any;
+    imgPath?:string;
     name: string;
     price: number;
     description: string;

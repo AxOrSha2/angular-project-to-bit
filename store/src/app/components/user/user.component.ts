@@ -40,7 +40,7 @@ export class UserComponent implements OnInit {
           this._userService.deleteUser(id).subscribe(data => {
               Swal.fire({
                   icon: 'success',
-                  title: 'Producto eliminado'
+                  title: 'Usuario eliminado'
               })
               this.getUsers()
           }, error => {

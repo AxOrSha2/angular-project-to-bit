@@ -1,0 +1,54 @@
+<app-dashboard></app-dashboard>
+<section class="container p-3">
+    <div class="row py-3 bg-dark">
+        <div class="col">
+            <h1 class="p-3 text-center text-light">Lista de productos</h1>
+        </div>
+        <div class="col align-self-center">
+            <button class="btn btn-light btn-lg float-end mx-4" [routerLink]="['/create-product']">
+                <i class="fa-regular fa-square-plus"></i>
+                Crear producto
+            </button>
+        </div>
+    </div>
+    <div class="row justify-content-center bg-light">
+        <div class="col px-5 py-3">
+            <table class="table table-striped px-5">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Vendedor</th>
+                        <th scope="col">Disponibles</th>
+                        <th scope="col">Imagen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of productList">
+                        <th scope="row"> 1 </th>
+                        <td> {{ product.name }} </td>
+                        <td> {{ product.price | currency:'COP' }} </td>
+                        <td> {{ product.description }} </td>
+                        <td> {{ product.seller }} </td>
+                        <td> {{ product.stock_available }} </td>
+                        <td>
+                            <button type="button" class="btn btn-secondary px-4 me-3">
+                                <i class="fa-solid fa-image"></i>
+                            </button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger px-4 me-3" (click)="deleteProduct(product._id)" >
+                                <i class="fa-regular fa-trash-can"></i>
+                            </button>
+                            <button type="button" class="btn btn-warning px-4 me-3" [routerLink]="['/alter-products',product._id]">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

@@ -11,6 +11,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UserComponent } from './components/user/user.component';
 import { RegisterUsersComponent } from './components/register-users/register-users.component';
+import { RegisterProductsComponent } from './components/register-products/register-products.component';
+import { ProductComponent } from './components/product/product.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { RegisterUsersComponent } from './components/register-users/register-use
     DashboardComponent,
     ShoppingCartComponent,
     UserComponent,
-    RegisterUsersComponent
+    RegisterUsersComponent,
+    RegisterProductsComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
