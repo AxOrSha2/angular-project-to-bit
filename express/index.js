@@ -10,8 +10,8 @@ const port = process.env.PORT || 9000;
 
 
 //Config  middleware para express
-app.use(express.json());//Procesar peticiones de cuerpo json
-app.use(express.urlencoded());//Procesar parámetros codificados en la URL
+app.use(express.json({limit:'3mb'}));//Procesar peticiones de cuerpo json
+app.use(express.urlencoded({limit: '3mb'}));//Procesar parámetros codificados en la URL
 
 
 //Settings connections to MongoDB

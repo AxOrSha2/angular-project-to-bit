@@ -21,6 +21,9 @@ const productSchema = mongoose.Schema({
         type: Number,
         require: true
     },
+    imgPath : {
+        type: String,
+    },
     fec_cre: {
         type: Date,
         default: Date.now()
