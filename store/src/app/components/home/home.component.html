@@ -5,8 +5,7 @@
     </div>
     <div class="row p-3 justify-content-center hstack gap-3">
         <div *ngFor="let product of productList" class="card px-3" style="width: 18rem;" aria-hidden="true">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Avocado_Hass_-_single_and_halved.jpg/1280px-Avocado_Hass_-_single_and_halved.jpg"
-                class="card-img-top p-2" alt="...">
+            <img [src]="product.imgPath" class="card-img-top p-2" alt="...">
             <div class="card-body">
                 <h5 class="card-title"> Producto: {{ product.name }}</h5>
                 <p class="card-text"> Valor: {{ product.price | currency:'COP'}}</p>
