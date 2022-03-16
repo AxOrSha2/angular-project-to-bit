@@ -39,6 +39,7 @@ export class RegisterProductsComponent implements OnInit {
   getFile(event:any) {
     const file = event.target.files[0];
     this.convertToBase64(file)
+    console.log(file)
   }
 
   convertToBase64(file: any) {
@@ -96,7 +97,7 @@ export class RegisterProductsComponent implements OnInit {
         })
       })
     } else {
-      //When the user is updated
+      //When the product is updated
       this._productService.putProducts(this.id, product_form).subscribe(data => {
         this.router.navigate(['/products']);
 
