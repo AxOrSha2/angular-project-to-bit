@@ -23,7 +23,6 @@ export class HomeComponent implements OnInit {
   getProducts() {
     this._productService.getProducts().subscribe(data => {
       this.productList = data
-      console.log(this.productList)
     }, error => {
       console.log(error)
     })

@@ -40,7 +40,7 @@ exports.findProducts = async (req, res) => {
 
 exports.updateProducts = async (req, res) => {
     try {
-        const { name, price, description, seller, stock_available } = req.body
+        const { name, price, description, seller, stock_available, imgPath } = req.body
         let product_data = await Product.findById(req.params.id);
 
         if (!product_data) {
@@ -52,6 +52,7 @@ exports.updateProducts = async (req, res) => {
         product_data.description = description;
         product_data.seller = seller;
         product_data.stock_available = stock_available;
+        product_data.imgPath = imgPath;
 
         product_data = await Product.findOneAndUpdate({ _id: req.params.id }, product_data, { new: true })
         res.json(product_data);

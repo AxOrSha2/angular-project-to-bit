@@ -11,6 +11,7 @@ import Swal from 'sweetalert2';
   templateUrl: './register-products.component.html',
   styleUrls: ['./register-products.component.css']
 })
+
 export class RegisterProductsComponent implements OnInit {
 
   productForm: FormGroup;
@@ -26,7 +27,6 @@ export class RegisterProductsComponent implements OnInit {
       description:['',Validators.required],
       seller:['',Validators.required],
       stock_available:['',[Validators.required, Validators.pattern(this.only_numbers)]]
-      // imgPath:['']
     });
 
     this.id = this.idProductPath.snapshot.paramMap.get('id');
@@ -39,7 +39,6 @@ export class RegisterProductsComponent implements OnInit {
   getFile(event:any) {
     const file = event.target.files[0];
     this.convertToBase64(file)
-    console.log(file)
   }
 
   convertToBase64(file: any) {
@@ -47,7 +46,6 @@ export class RegisterProductsComponent implements OnInit {
       this.readFile(file,subscriber);
     })
     observable.subscribe((result) => {
-      console.log(result)
       this.image = result
     });
   }
@@ -82,7 +80,6 @@ export class RegisterProductsComponent implements OnInit {
       // When the product is created
       this._productService.postProducts(product_form).subscribe(data =>{
         this.router.navigate(['/products']);
-        
         Swal.fire({
           icon: 'success',
           title: 'Dato guardado',
@@ -95,12 +92,12 @@ export class RegisterProductsComponent implements OnInit {
           title: 'Algo esta pasando',
           text: 'Comuniquese con el administrador'
         })
+
       })
     } else {
       //When the product is updated
       this._productService.putProducts(this.id, product_form).subscribe(data => {
         this.router.navigate(['/products']);
-
         Swal.fire({
           icon: 'success',
           title: 'Dato actualizado',
@@ -128,7 +125,6 @@ export class RegisterProductsComponent implements OnInit {
           description: data.description,
           seller: data.seller,
           stock_available: data.stock_available
-          // imgPath: data.imgPath
         })
       },error =>{
         console.log(error);
